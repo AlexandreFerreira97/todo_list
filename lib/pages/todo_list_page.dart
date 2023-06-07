@@ -5,6 +5,17 @@ class TodoListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.pink,);
+    return const Scaffold(
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.only(left: 16, right: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
