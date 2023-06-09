@@ -23,7 +23,10 @@ class TodoListPage extends StatelessWidget {
               SizedBox(width: 8),
               ElevatedButton(
                 onPressed: null,
-                child: Text('+'),
+                child: Icon(
+                  Icons.add,
+                  size: 30,
+                ),
               ),
             ],
           ),
