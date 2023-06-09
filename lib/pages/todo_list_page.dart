@@ -9,29 +9,53 @@ class TodoListPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              const Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Adicione uma tarefa',
-                    hintText: 'Ex. Estudar para a prova de matemática',
+              Row(
+                children: [
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Adicione uma tarefa',
+                        hintText: 'Ex. Estudar para a prova de matemática',
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(width: 8),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff00d7f3),
+                      padding: const EdgeInsets.all(14.5),
+                    ),
+                    child: const Icon(
+                      Icons.add,
+                      size: 30,
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(width: 8),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xff00d7f3),
-                  padding: const EdgeInsets.all(14.5),
-                ),
-                child: const Icon(
-                  Icons.add,
-                  size: 30,
-                ),
-              ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  const Expanded(
+                    child: Text(
+                      'Você possui 0 tarefas pendentes.',
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff00d7f3),
+                      padding: const EdgeInsets.all(16),
+                    ),
+                    child: Text('Limpar tudo'),
+                  ),
+                ],
+              )
             ],
           ),
         ),
