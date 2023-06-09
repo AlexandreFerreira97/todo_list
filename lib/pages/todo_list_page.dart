@@ -11,7 +11,7 @@ class TodoListPage extends StatelessWidget {
           padding: EdgeInsets.only(left: 16, right: 16),
           child: TextField(
             decoration: InputDecoration(
-              
+              labelText: 'E-mail',
             ),
           ),
         ),
