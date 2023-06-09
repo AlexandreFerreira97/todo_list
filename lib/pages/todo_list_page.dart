@@ -38,6 +38,13 @@ class TodoListPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
+              SizedBox(
+                height: 120,
+                child: ListView(
+                  children: [],
+                ),
+              ),
+              const SizedBox(height: 16),
               Row(
                 children: [
                   const Expanded(
