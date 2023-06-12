@@ -60,7 +60,9 @@ class _TodoListPageState extends State<TodoListPage> {
                   shrinkWrap: true,
                   children: [
                     for(String todo in todos)
-                      const TodoListItem(),
+                      TodoListItem(
+                        title: todo,
+                      ),
                   ],
                 ),
               ),
