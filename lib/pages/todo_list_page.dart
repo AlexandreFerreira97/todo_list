@@ -45,6 +45,7 @@ class _TodoListPageState extends State<TodoListPage> {
                             title: text,
                             dateTime: DateTime.now(),
                           );
+                          todos.add(newTodo);
                         });
                         todoController.clear();
                       },
