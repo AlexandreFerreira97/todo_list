@@ -20,7 +20,7 @@ class TodoListItem extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 2),
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               //todo.dateTime.toString(),
