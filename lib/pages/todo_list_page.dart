@@ -147,12 +147,21 @@ class _TodoListPageState extends State<TodoListPage> {
             child: const Text('Cancelar'),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+              deleteAllTodos();
+            },
             style: TextButton.styleFrom(primary: Colors.red),
             child: const Text('Limpar Tudo'),
           ),
         ],
       ),
     );
+  }
+
+  void deleteAllTodos(){
+    setState(() {
+      todos.clear();
+    });
   }
 }
