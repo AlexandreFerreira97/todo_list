@@ -12,7 +12,7 @@ class TodoListPage extends StatefulWidget {
 class _TodoListPageState extends State<TodoListPage> {
   final TextEditingController todoController = TextEditingController();
 
-  List <Todo> todos = [];
+  List<Todo> todos = [];
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class _TodoListPageState extends State<TodoListPage> {
                   child: ListView(
                     shrinkWrap: true,
                     children: [
-                      for(Todo todo in todos)
+                      for (Todo todo in todos)
                         TodoListItem(
                           todo: todo,
                           onDelete: onDelete,
@@ -100,10 +100,26 @@ class _TodoListPageState extends State<TodoListPage> {
     );
   }
 
-  void onDelete(Todo todo){
+  void onDelete(Todo todo) {
     setState(() {
       todos.remove(todo);
     });
-  }
 
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Tarefa ${todo.title} foi removida com sucesso!',
+        style: const TextStyle(color: Color(0xff060708),
+          ),
+        ),
+        backgroundColor: Colors.white,
+        action: SnackBarAction(
+          label: 'Desfazer',
+          textColor: const Color(0xff00d7f3),
+          onPressed: () {
+
+          },
+        ),
+      )
+    );
+  }
 }
