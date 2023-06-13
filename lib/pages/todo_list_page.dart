@@ -140,7 +140,9 @@ class _TodoListPageState extends State<TodoListPage> {
         content: const Text('Quer mesmo apagar todas as tarefas?'),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             style: TextButton.styleFrom(primary: const Color(0xff00d7f3)),
             child: const Text('Cancelar'),
           ),
