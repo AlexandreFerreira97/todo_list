@@ -26,7 +26,7 @@ class _TodoListPageState extends State<TodoListPage> {
       setState(() {
         todos = value;
       });
-      });
+    });
   }
 
   @override
